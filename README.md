@@ -1,5 +1,7 @@
 # jedit-test-framework
 
+[![Build Status](https://travis-ci.org/ssoloff/jedit-test-framework.svg?branch=master)](https://travis-ci.org/ssoloff/jedit-test-framework)
+
 The jEdit test framework
 
 The purpose of this project is provide the jEdit test framework as a standalone library so it can be easily used by plugin developers.
