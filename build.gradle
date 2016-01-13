@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'maven-publish'
+    id 'com.jfrog.bintray' version '1.5'
 }
 
 group = 'io.github.ssoloff'
@@ -35,4 +37,36 @@ task wrapper(type: Wrapper) {
     group = 'Build Setup'
 
     gradleVersion = '2.10'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+bintray {
+    user = bintrayUser
+    key = bintrayKey
+
+    publish = true
+    publications = ['maven']
+
+    pkg {
+        repo = 'maven'
+        name = 'io.github.ssoloff:jedit-test-framework'
+        desc = 'jEdit test framework'
+        websiteUrl = 'https://github.com/ssoloff/jedit-test-framework'
+        issueTrackerUrl = 'https://github.com/ssoloff/jedit-test-framework/issues'
+        vcsUrl = 'https://github.com/ssoloff/jedit-test-framework.git'
+        licenses = ['GPL-2.0']
+        publicDownloadNumbers = true
+
+        version {
+            name = "${project.version}"
+            desc = "jEdit Test Framework ${project.version}"
+        }
+    }
 }
