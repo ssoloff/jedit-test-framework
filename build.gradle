@@ -48,8 +48,8 @@ publishing {
 }
 
 bintray {
-    user = bintrayUser
-    key = bintrayKey
+    user = project.properties['bintrayUser'] ?: ''
+    key = project.properties['bintrayKey'] ?: ''
 
     publish = true
     publications = ['maven']
