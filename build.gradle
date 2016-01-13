@@ -1,0 +1,6 @@
+task wrapper(type: Wrapper) {
+    description = 'Generates Gradle wrapper files.'
+    group = 'Build Setup'
+
+    gradleVersion = '2.10'
+}
