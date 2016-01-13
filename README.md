@@ -4,7 +4,7 @@
 
 The jEdit test framework
 
-The purpose of this project is provide the jEdit test framework as a standalone library so it can be easily used by plugin developers.
+The purpose of this project is to provide the jEdit test framework as a standalone library so it can be easily used by plugin developers.
 
 ## Development Environment
 
