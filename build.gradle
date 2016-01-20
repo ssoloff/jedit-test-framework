@@ -69,6 +69,7 @@ bintray {
     user = project.properties['bintrayUser'] ?: ''
     key = project.properties['bintrayKey'] ?: ''
 
+    dryRun = project.properties['bintrayDryRun'] ?: false
     publish = true
     publications = ['maven']
 
